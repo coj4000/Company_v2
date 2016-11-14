@@ -11,6 +11,19 @@ namespace Sandbox
         {
         }
 
+        public int workhours;
+        public int salary;
+        public int HoursWorkedPerMonth(int hours)
+        {
+            this.workhours = hours;
+            return workhours;
+        }
+
+        public int SalaryPerHour(int money)
+        {
+            this.salary = money;
+            return salary;
+        }
         public override int GetBonusPerMonth()
         {
             throw new NotImplementedException();
@@ -18,12 +31,14 @@ namespace Sandbox
 
         public override int GetSalaryPerMonth()
         {
-            throw new NotImplementedException();
+            int pay = this.workhours * this.salary;
+            return pay;
+
         }
 
         public override bool IsBonusPaidOut()
         {
-            throw new NotImplementedException();
+            return false;
         }
     }
 }
